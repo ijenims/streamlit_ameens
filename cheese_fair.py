@@ -20,7 +20,7 @@ uploaded_file = st.sidebar.file_uploader("Excelファイルを選択してくだ
 ### メイン画面
 
 # アプリケーションのタイトルを設定
-st.header('Cheese Fair 2024', divider='orange')
+st.title('Cheese Fair 2024')
 
 
 # ファイルがアップロードされたら処理を実行

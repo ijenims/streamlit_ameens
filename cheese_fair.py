@@ -5,7 +5,7 @@ import pandas as pd
 # import matplotlib.pyplot as plt
 
 # 画面設定
-# st.set_page_config(layout='wide')
+st.set_page_config(layout='wide')
 
 # 初期設定
 data = pd.DataFrame()
@@ -20,7 +20,7 @@ uploaded_file = st.sidebar.file_uploader("Excelファイルを選択してくだ
 ### メイン画面
 
 # アプリケーションのタイトルを設定
-st.title('Cheese Fair 2024')
+st.header('Cheese Fair 2024', divider='orange')
 
 
 # ファイルがアップロードされたら処理を実行
@@ -47,19 +47,20 @@ if uploaded_file is not None:
 
     ## chart表示
     # 日毎の注文数（グラフ）
-    st.text('日毎の注文数')
+    st.markdown('<h4>日毎の注文数</h4>', unsafe_allow_html=True)
+    # st.text('日毎の注文数')
     st.bar_chart(df, height=500)
 
     # チーズ毎の注文数（グラフ）
-    st.text('チーズ毎の注文数')
+    st.markdown('<h4>チーズ毎の注文数</h4>', unsafe_allow_html=True)
     st.bar_chart(df.T, height=500)
 
     # chart_dataの表示
-    st.text('グラフデータ')
+    st.markdown('<h4>グラフデータ</h4>', unsafe_allow_html=True)
     st.dataframe(df)
 
     # data表示
-    st.text('入力データ')
+    st.markdown('<h4>入力データ</h4>', unsafe_allow_html=True)
     st.dataframe(data)
 
 

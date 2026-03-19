@@ -12,7 +12,7 @@ data = pd.DataFrame()
 uploaded_file = st.sidebar.file_uploader("Excelファイルを選択してください", type="xlsx")
 
 ### メイン画面
-st.title("Cheese Fair Ameens")
+st.title("Cheese Fair Ameen's")
 
 if uploaded_file is not None:
     # ExcelファイルをPandasのデータフレームに読み込む

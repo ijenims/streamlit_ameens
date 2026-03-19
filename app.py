@@ -47,7 +47,10 @@ if uploaded_file is not None:
         color="cheese",
         barmode="stack",
         height=500,
-        color_discrete_sequence=px.colors.qualitative.Set2,
+        color_discrete_sequence=px.colors.qualitative.Dark24,
+        # color_discrete_sequence=px.colors.cyclical.mygbm,
+        # color_discrete_sequence=px.colors.sequential.Rainbow,
+        opacity=0.5
     )
 
     fig_daily.update_layout(
@@ -62,7 +65,7 @@ if uploaded_file is not None:
         margin=dict(b=120)
     )
 
-    st.plotly_chart(fig_daily, use_container_width=True)
+    st.plotly_chart(fig_daily, width='stretch')
 
     # ===== チーズ毎の注文数（積上げ棒グラフ）=====
     st.markdown("<h4>チーズ毎の注文数</h4>", unsafe_allow_html=True)
@@ -83,7 +86,8 @@ if uploaded_file is not None:
         color="date",
         barmode="stack",
         height=500,
-        color_discrete_sequence=px.colors.sequential.YlOrRd
+        color_discrete_sequence=px.colors.sequential.YlOrRd,
+        opacity=0.6
     )
 
     fig_cheese.update_layout(
@@ -98,7 +102,7 @@ if uploaded_file is not None:
         margin=dict(b=120)
     )
 
-    st.plotly_chart(fig_cheese, use_container_width=True)
+    st.plotly_chart(fig_cheese, width='stretch')
 
     # chart_dataの表示
     st.markdown("<h4>グラフデータ</h4>", unsafe_allow_html=True)

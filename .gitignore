@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 仮想環境
+.venv/
+venv/
+env/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# データ（ローカルだけで使うなら）
+data/*.xlsx
+data/*.csv
+
+# ログ・一時ファイル
+*.log
+*.tmp
